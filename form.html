@@ -7,12 +7,12 @@
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
     <!-- added line below to connect with index.js -->
-    <script src="./index.js" defer></script>
+    <script src="./form.js" defer></script>
   </head>
   <body>
-    <header class="header">
+    <!-- <header class="header">
       <h1 class="header__title">Quiz-App</h1>
-    </header>
+    </header> -->
     <!-- I copied the index.html file and deleted the cards, i.e. everything inside "main"; going to replace them with the form items -->
     <!-- Create a new HTML document called form.html
     Within form.html create a form with the following fields
@@ -27,13 +27,24 @@
       <!--  -->
       <form>
         <label for="your-question">Your question:</label>
-        <textarea name="your-question" id="your-question"></textarea>
-        <!-- <textarea name="" id="" cols="30" rows="10"></textarea> -->
+        <!-- neue Zeile; das ist jetzt einfacher als mit css -->
+        <br />
+
+        <textarea
+          name="your-question"
+          id="your-question"
+          cols="30"
+          rows="10"
+        ></textarea>
+        <br />
 
         <label for="your-answer">Your answer:</label>
         <textarea name="your-answer" id="your-answer"></textarea>
+        <br />
 
         <label for="tag">Tag:</label>
+        <br />
+
         <textarea name="tag" id="tag"></textarea>
 
         <button type="submit">Send</button>
