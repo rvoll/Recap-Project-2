@@ -39,6 +39,12 @@
   top: -1.5rem;
 }
 
+.card__button-bookmark {
+  position: absolute;
+  right: 1rem;
+  top: -1.5rem;
+}
+
 .card__tag-list {
   display: flex;
   flex-wrap: wrap;
