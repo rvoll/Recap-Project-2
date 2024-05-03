@@ -23,14 +23,17 @@
     Please consider only a single tag per card for now. Handling a list of individual tags will be discussed later on.
      -->
 
-    <main>
+    <mainfieldset>
       <!--  -->
+
       <form>
+      
+        <fieldset>
         <label for="your-question">Your question:</label>
-        <!-- neue Zeile; das ist jetzt einfacher als mit css -->
+        <!-- linebreak; das ist jetzt einfacher als mit css -->
         <br />
 
-        <textarea
+        <textarea class="inputBox"
           name="your-question"
           id="your-question"
           cols="30"
@@ -39,16 +42,22 @@
         <br />
 
         <label for="your-answer">Your answer:</label>
-        <textarea name="your-answer" id="your-answer"></textarea>
+        <br />
+        <textarea class="inputBox"
+        name="your-answer" id="your-answer"></textarea>
         <br />
 
         <label for="tag">Tag:</label>
         <br />
 
-        <textarea name="tag" id="tag"></textarea>
+        <textarea class="inputBox"
+        name="tag" id="tag"></textarea>
+        <br />
+        <br />
 
         <button type="submit">Send</button>
-      </form>
+      </fieldset>
+    </form>
       <!--  -->
     </main>
 
@@ -90,6 +99,29 @@
             </svg>
           </a>
         </li>
+                <!--adding a new list element in order to add a link 
+          to the form page in the toolbar -->
+          <li class="navigation__list-item">
+            <a
+              class="navigation__link"
+              href="/form.html"
+              aria-label="go to add cards page"
+            >
+              <!-- svg hierherkopiert von https://pictogrammers.com/library/mdi/icon/plus-box-outline/ ; width hinzugefügt-->
+              <!-- unter width kann man fill oder stroke einfügen; stroke="red"; oder besser der svg eine cklass zuweisen, die eine fill-Wert bekommt -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="24px"
+              >
+                <title>plus-box-outline</title>
+                <path
+                  d="M19,19V5H5V19H19M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5C3,3.89 3.9,3 5,3H19M11,7H13V11H17V13H13V17H11V13H7V11H11V7Z"
+                />
+              </svg>
+            </a>
+          </li>
+          <!-- bis hier isses neu  -->
         <li class="navigation__list-item">
           <a
             class="navigation__link"
