@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz-App</title>
     <link rel="stylesheet" href="./styles.css" />
+
     <!-- added line below to connect with index.js -->
     <script src="./form.js" defer></script>
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <h1 class="header__title">Quiz-App</h1>
-    </header> -->
+    </header>
+
     <!-- I copied the index.html file and deleted the cards, i.e. everything inside "main"; going to replace them with the form items -->
     <!-- Create a new HTML document called form.html
     Within form.html create a form with the following fields
@@ -23,42 +25,34 @@
     Please consider only a single tag per card for now. Handling a list of individual tags will be discussed later on.
      -->
 
-    <mainfieldset>
-      <!--  -->
+      <form aria-label="form in which the user can enter own quiz questions, answers and tags" 
+      class="form__formBox" data-js="form__formBox"
+      name="your-question"
+      id="your-question">   
 
-      <form>
-      
-        <fieldset>
-        <label for="your-question">Your question:</label>
-        <!-- linebreak; das ist jetzt einfacher als mit css -->
-        <br />
-
-        <textarea class="inputBox"
+        <label for="your-question" class="form__formBoxLabel" >Your question:</label>
+        <textarea aria-label="textbox to enter own questions" class="form__inputBox" data-js="form__inputBox"
           name="your-question"
           id="your-question"
           cols="30"
-          rows="10"
+          rows="6"
         ></textarea>
         <br />
 
-        <label for="your-answer">Your answer:</label>
-        <br />
-        <textarea class="inputBox"
-        name="your-answer" id="your-answer"></textarea>
-        <br />
-
-        <label for="tag">Tag:</label>
+        <label for="your-answer" class="form__formBoxLabel">Your answer:</label>
+        <textarea aria-label="textbox to enter own answers" class="form__inputBox" data-js="form__inputBox"
+        name="your-answer" id="your-answer">
+        </textarea>
         <br />
 
-        <textarea class="inputBox"
-        name="tag" id="tag"></textarea>
-        <br />
+        <label for="tag"  class="form__formBoxLabel">Tag:</label>
+        <textarea aria-label="textbox to enter own tags" class="form__inputBox" data-js="form__inputBox"
+        name="tag" id="tag">
+        </textarea>
         <br />
 
-        <button type="submit">Send</button>
-      </fieldset>
+        <button type="submit" class="form__submitButton">Send</button>
     </form>
-      <!--  -->
     </main>
 
     <nav class="navigation">
