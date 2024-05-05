@@ -1,25 +1,71 @@
 .form__formBox {
-  /* How do I get the form not to disappear 
-  behind the header when teh page is reloaded?*/
-  margin-top: 50%;
+  /* QUESTION: 
+  How do I get the form not to disappear 
+  behind the header when the page is reloaded? 
+  Neither to hide behind the footer?*/
+  margin-top: 30%;
   display: flex;
   flex-direction: column;
+  /* I'm not sure 'justify-content: center;' 
+is the best choice here but space-between seems to have 
+no effect. I will use 'gap' instead. */
   justify-content: center;
   align-items: center;
-  /* How do I get the text (box labels) to left-align?*/
+  gap: 12px;
+  /*  */
+  /* How do I get the text (box labels) to left-align?
+  align-content: flex-start; 
+  - does not do anything here */
+  /*  */
+  /* display: grid; doesn't seem to make sense here, either.
+  Q: Can a grid have a margin around it?
+  
+  grid-template-areas: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
 }
 
 .form__formBoxLabel {
   display: flex;
-  text-align: start;
+  text-align: left;
   justify-items: flex-start;
+  /* This is the solution - in order to left-align the labels: 
+  I need 'flex-start' rather than 'justify-items'
+  rather than justify-items because I"'"m dealing with the cross-axis! 
+  This makes the div container 'form__labelTextAreaPair' redundant.
+  NO! It doesn't! It still seems only div can left-align the labels.
+  But then again - I'mn not using div in the .css file; it is enough 
+  to just have it in the html-file. Is this because 'align-content: flex-start;' 
+  is the default? Or why else?*/
+  /* I think div also serves well to add gaps between label-text box pairs. */
+  /*  */
+  align-items: flex-start;
+  /* How do I get the text (box labels) to left-align?
+  It does not work if I add this in .form__formBox, 
+  neither in .form__formBoxLabel*/
+  /* align-content: flex-start; */
 }
+
+/*  */
+/* .form__labelTextAreaPair {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+} */
 
 .form__inputBox {
   border: 1px solid var(--black);
   padding: 2rem;
   text-align: center;
   position: relative;
+}
+
+/* I introduced this class 
+in order to make the box only 1 line high; it works not perfectly 
+but at least a bit, making the box less high. */
+.form__inputBox__tag {
+  height: 1em;
 }
 
 .form__submitButton {

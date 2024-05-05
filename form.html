@@ -30,28 +30,63 @@
       name="your-question"
       id="your-question">   
 
+      <!-- delete div -->
+      <!-- This container (div including form and label makes 
+        that the label left aligns with the imput box; 
+        it seems to be the only way. This way we don't have to use 
+        'align-content: flex-start;', which doesn't seem to do anything anyway.
+        Is it good to use div here or is it better to use 
+        a more descriptive label 
+        - and what? Maybe /fieldset? 
+        Then I would have to get rid of the frame around it 
+        which should work with border=none, right?) -->
+      <div class="form__labelTextAreaPair">
         <label for="your-question" class="form__formBoxLabel" >Your question:</label>
-        <textarea aria-label="textbox to enter own questions" class="form__inputBox" data-js="form__inputBox"
+        <textarea 
+          aria-label="textbox to enter own questions" 
+          class="form__inputBox" 
+          data-js="form__inputBox"
           name="your-question"
           id="your-question"
-          cols="30"
-          rows="6"
+          cols="28"          
+          rows="3"
         ></textarea>
-        <br />
+      </div>
 
+      <!-- line break - fix with flexbox and delete! -->
+        <!-- <br /> -->
+
+        <div class="form__labelTextAreaPair">
         <label for="your-answer" class="form__formBoxLabel">Your answer:</label>
-        <textarea aria-label="textbox to enter own answers" class="form__inputBox" data-js="form__inputBox"
-        name="your-answer" id="your-answer">
+        <textarea 
+        aria-label="textbox to enter own answers" 
+        class="form__inputBox" 
+        data-js="form__inputBox"
+        name="your-answer" 
+        id="your-answer"
+        cols="28"
+        rows="3"
+        >
         </textarea>
-        <br />
+ <!-- line break - fix with flexbox and delete! -->
+ <!-- <br /> -->
+      </div>
 
+      <div class="form__labelTextAreaPair">
+        <!-- Q: Should I design an aria-label to the class 'form__labelTextAreaPair'? 
+          Or does it make no sense because it is only meant to fix the layout?-->
         <label for="tag"  class="form__formBoxLabel">Tag:</label>
-        <textarea aria-label="textbox to enter own tags" class="form__inputBox" data-js="form__inputBox"
-        name="tag" id="tag">
+        <textarea aria-label="textbox to enter own tags" class="form__inputBox form__inputBox__tag" data-js="form__inputBox"
+        name="tag" id="tag"
+        cols="28"
+        rows="1"
+        > 
         </textarea>
-        <br />
+<!-- line break - fix with flexbox and delete! -->
+        <!-- <br /> -->
+      </div>
 
-        <button type="submit" class="form__submitButton">Send</button>
+        <button type="submit" class="form__submitButton">Submit</button>
     </form>
     </main>
 
