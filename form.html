@@ -75,13 +75,16 @@
       <div class="form__labelTextAreaPair">
         <!-- Q: Should I design an aria-label to the class 'form__labelTextAreaPair'? 
           Or does it make no sense because it is only meant to fix the layout?-->
+        
         <label for="tag"  class="form__formBoxLabel">Tag:</label>
+        <!-- wuthout row and column, the box is not as wide as the others; although the box is not big enough for 3 rows; this had to be fixed in the css. -->
         <textarea aria-label="textbox to enter own tags" class="form__inputBox form__inputBox__tag" data-js="form__inputBox"
         name="tag" id="tag"
         cols="28"
-        rows="1"
+        rows="3"
         > 
-        </textarea>
+        </textarea 
+        >
 <!-- line break - fix with flexbox and delete! -->
         <!-- <br /> -->
       </div>

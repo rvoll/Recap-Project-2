@@ -56,8 +56,9 @@ no effect. I will use 'gap' instead. */
 
 .form__inputBox {
   border: 1px solid var(--black);
-  padding: 2rem;
-  text-align: center;
+  padding: 0.5em;
+  padding-top: 0.5em;
+  text-align: start;
   position: relative;
 }
 
@@ -65,7 +66,7 @@ no effect. I will use 'gap' instead. */
 in order to make the box only 1 line high; it works not perfectly 
 but at least a bit, making the box less high. */
 .form__inputBox__tag {
-  height: 1em;
+  height: 4em;
 }
 
 .form__submitButton {
