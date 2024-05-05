@@ -17,4 +17,40 @@ console.clear();
 
 // Append the card to the page, directly below the form
 
-// console.log("sanity check");
+// Listen to the form's submit event
+
+// 1. introduce button
+const button = document.querySelector('[data-js="form__submitButton"]');
+const userQuestion = document.querySelector('[data-js="form__submitButton"]');
+// 2. listen to click
+// 3. prevent default behaviour
+
+button.addEventListener("click", (event) => {
+  event.preventDefault();
+});
+
+// Read all entered data from the input fields (question, answer, tags)
+// see:
+// HIER WEITER!!!
+
+// function submitForm() {
+//   var userQuestion = document.querySelector("#your-question").value;
+//   console.log("user question: ", userQuestion);
+//   console.log("sanity check");
+// }
+
+// button.addEventListener("submit", (event) => {
+//   console.log("sanity check");
+//   event.preventDefault();
+
+//   //   const formElements = event.target.elements;
+
+//   const userQuestion = new userQuestion(event.target);
+//   const data = Object.fromEntries(userQuestion);
+
+//   console.log(data);
+// });
+
+// //   next add event listener for input box
+
+// const questionInput = document.querySelector('[data-js="form__inputBox"]');
