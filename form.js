@@ -21,7 +21,8 @@ console.clear();
 
 // 1. introduce button
 const button = document.querySelector('[data-js="form__submitButton"]');
-const userQuestion = document.querySelector('[data-js="form__submitButton"]');
+// const userQuestion = document.querySelector('[data-js="form__submitButton"]');
+
 // 2. listen to click
 // 3. prevent default behaviour
 
@@ -33,24 +34,13 @@ button.addEventListener("click", (event) => {
 // see:
 // HIER WEITER!!!
 
-// function submitForm() {
-//   var userQuestion = document.querySelector("#your-question").value;
-//   console.log("user question: ", userQuestion);
-//   console.log("sanity check");
-// }
+const form = document.querySelector('[data-js="form__formBox"]');
 
-// button.addEventListener("submit", (event) => {
-//   console.log("sanity check");
-//   event.preventDefault();
-
-//   //   const formElements = event.target.elements;
-
-//   const userQuestion = new userQuestion(event.target);
-//   const data = Object.fromEntries(userQuestion);
-
-//   console.log(data);
-// });
-
-// //   next add event listener for input box
-
-// const questionInput = document.querySelector('[data-js="form__inputBox"]');
+form.addEventListener("submit", (event) => {
+  const userQuestionInput = document.querySelector(
+    '[data-js="form__inputBox"]'
+  );
+  const userQuestion = userQuestionInput.value;
+  console.log(event.target);
+  console.log("sanity check");
+});
