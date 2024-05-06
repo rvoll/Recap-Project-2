@@ -26,9 +26,10 @@ const button = document.querySelector('[data-js="form__submitButton"]');
 // 2. listen to click
 // 3. prevent default behaviour
 
-button.addEventListener("click", (event) => {
-  event.preventDefault();
-});
+// auskommentiert:
+// button.addEventListener("click", (event) => {
+//   event.preventDefault();
+// });
 
 // Read all entered data from the input fields (question, answer, tags)
 // see:

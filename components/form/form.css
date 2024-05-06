@@ -26,6 +26,12 @@ no effect. I will use 'gap' instead. */
   align-items: center; */
 }
 
+/* Eltern Element Breite und oadding
+Kinder Breite 100% (bis zum padding)
+(sind dann Prozente vom Elternteil)
+Kinder dann Breite in 
+dann text-align:  left/start/? */
+
 .form__formBoxLabel {
   display: flex;
   text-align: left;
