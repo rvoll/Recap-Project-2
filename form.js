@@ -25,23 +25,34 @@ const button = document.querySelector('[data-js="form__submitButton"]');
 
 // 2. listen to click
 // 3. prevent default behaviour
-
+//
 // auskommentiert:
 // button.addEventListener("click", (event) => {
 //   event.preventDefault();
 // });
 
-// Read all entered data from the input fields (question, answer, tags)
-// see:
-// HIER WEITER!!!
-
+// 4. Read all entered data from the input fields (question, answer, tags)
 const form = document.querySelector('[data-js="form__formBox"]');
 
+mehr zu 3. 
+// Was ist der beste/einzig mögliche Ort für prevent?
+// Was genau passiert und warum ist es am falschen Ort problematisch?
 form.addEventListener("submit", (event) => {
-  const userQuestionInput = document.querySelector(
-    '[data-js="form__inputBox"]'
-  );
-  const userQuestion = userQuestionInput.value;
-  console.log(event.target);
-  console.log("sanity check");
-});
+    event.preventDefault();
+    console.log(event.target);
+  });
+
+// 5. Generate all DOM element for a card with createElement()
+
+// form.addEventListener("submit", (event) => {
+//   const userQuestionInput = document.querySelector(
+//     '[data-js="form__inputBox"]'
+//   );
+//   const userQuestion = userQuestionInput.value;
+//   event.preventDefault();
+//   console.log(event.target);
+//   console.log("sanity check");
+// });
+
+// 6. Insert the form's data as text into the DOM elements
+// 7. Append the card to the page, directly below the form
